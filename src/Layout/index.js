@@ -1,11 +1,9 @@
-import React from "react";
 import styled from "styled-components";
 import theme from "../theme";
 
-const Block = styled.article`
+export const Article = styled.article`
   display: flex;
   flex-direction: column;
-  max-width: 580px;
   justify-content: space-between;
   align-items: baseline;
   border-bottom: solid 1px #ccc;
@@ -16,4 +14,6 @@ const Block = styled.article`
   }
 `;
 
-export default props => <Block>{props.children}</Block>;
+export const Section = styled.section`
+  margin-bottom: 80px;
+`;
