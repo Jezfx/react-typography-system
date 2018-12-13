@@ -11,7 +11,7 @@ const Block = styled.article`
   border-bottom: solid 1px #ccc;
   margin-bottom: 40px;
 
-  @media screen and(min-width: ${theme.breakpoints[0]}) {
+  @media screen and (min-width: ${theme.breakpoints[0]}) {
     flex-direction: row;
   }
 `;

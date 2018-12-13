@@ -1,5 +1,3 @@
-import colours from "./colours";
-
 export default {
   textStyles: {
     canon: {
@@ -34,12 +32,6 @@ export default {
       fontSize: [3, 4, 5],
       fontFamily: "PT Serif",
       lineHeight: ["20px", "22px", "24px"]
-    }
-  },
-  buttons: {
-    primary: {
-      color: "black",
-      backgroundColor: colours.brightTurquoise
     }
   },
   fontSizes: [12, 13, 14, 15, 16, 18, 20, 21, 22, 24, 26, 28, 32, 36, 52],
