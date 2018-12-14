@@ -2,16 +2,14 @@
   "name": "typeography-system",
   "version": "0.1.0",
   "private": true,
-  "devDependencies": {
+  "dependencies": {
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
     "clean-tag": "^2.0.2",
     "react-scripts": "2.1.1",
     "styled-components": "^4.1.2",
     "styled-system": "^3.1.11",
     "webfontloader": "^1.6.28"
-  },
-  "dependencies": {
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3"
   },
   "scripts": {
     "start": "react-scripts start",
