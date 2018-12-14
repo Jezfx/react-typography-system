@@ -5,6 +5,7 @@ import {
   space,
   lineHeight,
   fontSize,
+  fontStyle,
   size,
   color,
   colorStyle,
@@ -18,6 +19,7 @@ import {
 const StyledDynamicComponent = styled(tag)`
   ${space}
   ${fontSize}
+  ${fontStyle}
   ${color}
   ${size}
   ${colorStyle}

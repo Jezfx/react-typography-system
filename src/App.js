@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { ThemeProvider } from "styled-components";
-import { Article, Section } from "./Layout";
+import styled, { ThemeProvider } from "styled-components";
+import { Split, Row, Section } from "./Layout";
 import Link from "./Link";
 
 import {
@@ -17,71 +17,113 @@ import Breakpoint from "./Breakpoint";
 import theme from "./theme";
 import "./App.css";
 
+const Uppercase = styled(GreatPrimer)`
+  text-transform: uppercase;
+`;
+
 class App extends Component {
   render() {
     return (
       <ThemeProvider theme={theme}>
         <>
-          <Breakpoint />
-
           <Section>
-            <Article>
-              <Canon>Canon</Canon>
-              <BodyCopy>Hero or blog post title</BodyCopy>
-            </Article>
-
-            <Article>
-              <Trafalgar>Trafalgar</Trafalgar>
-              <BodyCopy>Article title or section header</BodyCopy>
-            </Article>
-
-            <Article>
-              <Paragon>Paragon</Paragon>
-              <BodyCopy>Primary headline on indexes</BodyCopy>
-            </Article>
-
-            <Article>
-              <DoublePica>DoublePica</DoublePica>
-              <BodyCopy>Sub header</BodyCopy>
-            </Article>
-
-            <Article>
-              <GreatPrimer>GreatPrimer</GreatPrimer>
-              <BodyCopy>Headline title or subtitle</BodyCopy>
-            </Article>
-
-            <Article>
-              <BodyCopy>BodyCopy</BodyCopy>
-              <BodyCopy>Article body copy only</BodyCopy>
-            </Article>
-
-            <Article>
-              <Code>Code</Code>
-              <BodyCopy>For code wrapped snippets</BodyCopy>
-            </Article>
+            <Breakpoint />
           </Section>
 
           <Section>
-            <Article>
+            <BodyCopy>
+              View the full write up on <Link href="#">Medium</Link> ✌️
+            </BodyCopy>
+          </Section>
+
+          <Section>
+            <Split>
+              <Canon>Canon</Canon>
+              <BodyCopy>Hero or blog post title</BodyCopy>
+            </Split>
+
+            <Split>
+              <Trafalgar>Trafalgar</Trafalgar>
+              <BodyCopy>Article title or section header</BodyCopy>
+            </Split>
+
+            <Split>
+              <Paragon>Paragon</Paragon>
+              <BodyCopy>Primary headline on indexes</BodyCopy>
+            </Split>
+
+            <Split>
+              <DoublePica>DoublePica</DoublePica>
+              <BodyCopy>Sub header</BodyCopy>
+            </Split>
+
+            <Split>
+              <GreatPrimer>GreatPrimer</GreatPrimer>
+              <BodyCopy>Headline title or subtitle</BodyCopy>
+            </Split>
+
+            <Split>
+              <BodyCopy>BodyCopy</BodyCopy>
+              <BodyCopy>Article body copy only</BodyCopy>
+            </Split>
+
+            <Split>
+              <Code>Code</Code>
+              <BodyCopy>For code wrapped snippets</BodyCopy>
+            </Split>
+          </Section>
+
+          <Section>
+            <Row>
               <Canon tag="p" color={theme.colours.mantis}>
                 Canon
               </Canon>
-              <BodyCopy>
-                <Code
-                  fontSize={2}
-                >{`<Canon tag="p" color="green">Canon</Canon>`}</Code>
-              </BodyCopy>
-            </Article>
-          </Section>
+              <Code
+                fontSize={2}
+              >{`<Canon tag="p" color={theme.colours.mantis}>`}</Code>
+            </Row>
 
-          <Section>
-            <GreatPrimer>
-              Links in <Link href="#">Headings</Link>
-            </GreatPrimer>
-            <BodyCopy>
-              And also <Link href="#">links</Link> body copy work the same way.
-              Just nest the Link tag inside the typeography component.
-            </BodyCopy>
+            <Row>
+              <Trafalgar textStyle="underline">Trafalgar</Trafalgar>
+              <Code
+                fontSize={2}
+              >{`<Trafalgar textStyle="underline">Trafalgar</Trafalgar>`}</Code>
+            </Row>
+
+            <Row>
+              <Trafalgar color="#fff" bg={theme.colours.bostonBlue}>
+                Paragon
+              </Trafalgar>
+              <Code
+                fontSize={2}
+              >{`<Trafalgar color="#fff" bg={theme.colours.bostonBlue}>`}</Code>
+            </Row>
+
+            <Row>
+              <DoublePica>
+                <Link href="#">Double Pica</Link>
+              </DoublePica>
+              <Code
+                fontSize={2}
+              >{`<DoublePica><Link href="#">Double Pica</Link></DoublePica>`}</Code>
+            </Row>
+
+            <Row>
+              <Uppercase fontSize={3} fontWeight={700} tag="h6">
+                Great Primer
+              </Uppercase>
+              <Code
+                fontSize={2}
+              >{`<Uppercase fontSize={3} fontWeight={700} tag="h6">Great Primer</Uppercase>`}</Code>
+            </Row>
+
+            <Row>
+              <BodyCopy tag="i">Body Copy</BodyCopy>
+              <br />
+              <Code
+                fontSize={2}
+              >{`<BodyCopy tag="i">Body Copy</BodyCopy>`}</Code>
+            </Row>
           </Section>
         </>
       </ThemeProvider>

@@ -3,14 +3,14 @@ import ReactDOM from "react-dom";
 import WebFont from "webfontloader";
 import { createGlobalStyle } from "styled-components";
 
-import "./index.css";
+import "./reset.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
 const GlobalStyle = createGlobalStyle`
   body {
     padding: 10px;
-    max-width: 580px;
+    max-width: 700px;
   }
 `;
 

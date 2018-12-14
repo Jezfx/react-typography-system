@@ -1,19 +1,22 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
-import theme from '../theme'
+import theme from "../theme";
 
-const Breakpoint = styled.div`
-&:after {
-  content: "A";
+const Breakpoint = styled.span`
+  padding: 2px 4px;
+  background: ${theme.colours.citrineWhite};
 
-  @media screen and (min-width: ${theme.breakpoints[0]}) {
-    content: "B";
+  &:after {
+    content: "A";
+
+    @media screen and (min-width: ${theme.breakpoints[0]}) {
+      content: "B";
+    }
+    @media screen and (min-width: ${theme.breakpoints[1]}) {
+      content: "C";
+    }
   }
-  @media screen and (min-width: ${theme.breakpoints[1]}) {
-    content: "C";
-  }
-}
 `;
 
-export default () => <Breakpoint>Group: </Breakpoint>
+export default () => <Breakpoint>Group: </Breakpoint>;
