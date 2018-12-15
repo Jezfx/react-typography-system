@@ -1,4 +1,4 @@
-// naming http://chir.ag/projects/name-that-color/
+// http://chir.ag/projects/name-that-color/
 const colours = {
   bostonBlue: "#428bca",
   stTropaz: "#2a6496",
