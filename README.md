@@ -6,3 +6,8 @@ This is a collection of tools and conventions I've used to create a typography s
   Canon
 </Canon>
 ```
+
+I've this approach to re-create GEL, the CSS based typography system by the BBC. 
+Examples of this are on CodeSandbox and the full process is documented on Medium. 
+
+----
