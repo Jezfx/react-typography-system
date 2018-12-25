@@ -1,5 +1,5 @@
 ## React typography system
-This is a collection of tools and conventions I've used to create a typography system. It uses [styled-components](https://www.styled-components.com/) and [styled-system](https://github.com/jxnblk/styled-system/) to allow you to import typeography styles and override both the styling and markup like so: 
+This is a collection of tools and conventions I've used to create a typography system in React. It uses [styled-components](https://www.styled-components.com/) and [styled-system](https://github.com/jxnblk/styled-system/) to allow you to import styled typeography elements and override both the styling and markup like so: 
 
 ```jsx
 <Canon tag="p" color="red">
