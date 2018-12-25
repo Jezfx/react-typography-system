@@ -1,5 +1,5 @@
 ## React typography system
-This is a collection of tools and conventions I've used to create a typography system. It uses styled-components and styled-system to allow you to import typeography styles and override both the styling and markup like so: 
+This is a collection of tools and conventions I've used to create a typography system. It uses [styled-components](https://www.styled-components.com/) and [styled-system](https://github.com/jxnblk/styled-system/) to allow you to import typeography styles and override both the styling and markup like so: 
 
 ```jsx
 <Canon tag="p" color="red">
@@ -7,7 +7,7 @@ This is a collection of tools and conventions I've used to create a typography s
 </Canon>
 ```
 
-I've this approach to re-create GEL, the CSS based typography system by the BBC. 
+I've this approach to re-create [GEL](http://bbc.co.uk/gel/guidelines/typography), the excellent CSS based typography system by the BBC. 
 Examples of this are on CodeSandbox and the full process is documented on Medium. 
 
 ----
@@ -16,7 +16,7 @@ Examples of this are on CodeSandbox and the full process is documented on Medium
 
 The DynamicComponent is what enables you to override the styling and markup
 
-```
+```jsx
 import React from "react";
 import styled from "styled-components";
 import tag from "clean-tag";
@@ -61,7 +61,7 @@ DynamicComponent.defaultProps = {
 
 export default DynamicComponent;
 ```
-*./DynamicComponent/index.js
+*[./DynamicComponent/index.js](https://github.com/Jezfx/typography-system/blob/master/src/DynamicComponent/index.js)
 
 Each of the Typography styles use the higher orer DynamicComponent to enable style and markup overrides. The default styles get spread in from the theme.js file which is also passed into the ThemeProvider. 
 
@@ -73,4 +73,4 @@ export const Canon = props => (
   </DynamicComponent>
 );
 ```
-[*./Typography/index.js](https://github.com/Jezfx/typography-system/blob/master/src/Typography/index.js)
+*[./Typography/index.js](https://github.com/Jezfx/typography-system/blob/master/src/Typography/index.js)
