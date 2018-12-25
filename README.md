@@ -11,3 +11,66 @@ I've this approach to re-create GEL, the CSS based typography system by the BBC.
 Examples of this are on CodeSandbox and the full process is documented on Medium. 
 
 ----
+
+### Quick overview
+
+The DynamicComponent is what enables you to override the styling and markup
+
+```
+import React from "react";
+import styled from "styled-components";
+import tag from "clean-tag";
+import {
+  space,
+  lineHeight,
+  fontSize,
+  fontStyle,
+  size,
+  color,
+  colorStyle,
+  textStyle,
+  fontFamily,
+  fontWeight,
+  letterSpacing,
+  borderRadius
+} from "styled-system";
+
+const StyledDynamicComponent = styled(tag)`
+  ${space}
+  ${fontSize}
+  ${fontStyle}
+  ${color}
+  ${size}
+  ${colorStyle}
+  ${textStyle}
+  ${lineHeight}
+  ${letterSpacing}
+  ${fontFamily}
+  ${fontWeight}
+  ${borderRadius}
+`;
+
+const DynamicComponent = ({ tag = "div", children, ...props }) => {
+  const WithComponent = StyledDynamicComponent.withComponent(tag);
+  return <WithComponent {...props}>{children}</WithComponent>;
+};
+
+DynamicComponent.defaultProps = {
+  tag: "div"
+};
+
+export default DynamicComponent;
+```
+*./DynamicComponent/index.js
+
+Each of the Typography styles use the higher orer DynamicComponent to enable style and markup overrides. The default styles get spread in from the theme.js file which is also passed into the ThemeProvider. 
+
+
+```jsx
+export const Canon = props => (
+  <DynamicComponent {...canon} {...props}>
+    {props.children}
+  </DynamicComponent>
+);
+```
+[*./Typography/index.js](https://github.com/Jezfx/typography-system/blob/master/src/Typography/index.js)
