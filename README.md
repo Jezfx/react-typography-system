@@ -61,7 +61,7 @@ DynamicComponent.defaultProps = {
 
 export default DynamicComponent;
 ```
-*[./DynamicComponent/index.js](https://github.com/Jezfx/typography-system/blob/master/src/DynamicComponent/index.js)
+[./DynamicComponent/index.js](https://github.com/Jezfx/typography-system/blob/master/src/DynamicComponent/index.js)
 
 Each of the Typography styles use the higher orer DynamicComponent to enable style and markup overrides. The default styles get spread in from the theme.js file which is also passed into the ThemeProvider. 
 
@@ -73,4 +73,4 @@ export const Canon = props => (
   </DynamicComponent>
 );
 ```
-*[./Typography/index.js](https://github.com/Jezfx/typography-system/blob/master/src/Typography/index.js)
+[./Typography/index.js](https://github.com/Jezfx/typography-system/blob/master/src/Typography/index.js)
