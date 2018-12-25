@@ -31,12 +31,6 @@ class App extends Component {
           </Section>
 
           <Section>
-            <BodyCopy>
-              View the full write up on <Link href="#">Medium</Link> ✌️
-            </BodyCopy>
-          </Section>
-
-          <Section>
             <Split>
               <Canon>Canon</Canon>
               <BodyCopy>Hero or blog post title</BodyCopy>
@@ -124,6 +118,12 @@ class App extends Component {
                 fontSize={2}
               >{`<BodyCopy tag="i">Body Copy</BodyCopy>`}</Code>
             </Row>
+          </Section>
+          <Section>
+            <BodyCopy>
+              View the full write up on{" "}
+              <Link href="https://medium.com/p/f9d1c8e16d55/">Medium</Link> ✌️
+            </BodyCopy>
           </Section>
         </>
       </ThemeProvider>

@@ -19,4 +19,4 @@ const Breakpoint = styled.span`
   }
 `;
 
-export default () => <Breakpoint>Group: </Breakpoint>;
+export default () => <Breakpoint>Breakpoint: </Breakpoint>;
