@@ -8,7 +8,7 @@ This is a collection of tools and conventions I've used to create a typography s
 ```
 
 I've this approach to re-create [GEL](http://bbc.co.uk/gel/guidelines/typography), the excellent CSS based typography system by the BBC. 
-Examples of this are on [CodeSandbox](https://codesandbox.io/s/kw89ro5y2r) and the full process is documented on [Medium](https://medium.com/p/f9d1c8e16d55/). 
+Examples of this are on [CodeSandbox](https://codesandbox.io/s/kw89ro5y2r) and the full process is documented on [Medium](https://medium.com/@jezfx/building-a-react-typography-system-f9d1c8e16d55). 
 
 ## Quick overview
 
