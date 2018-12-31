@@ -17,47 +17,48 @@ const fontFamilies = {
 export default {
   textStyles: {
     canon: {
-      tag: "h1",
+      as: "h1",
       fontSize: [11, 12, 14],
       fontWeight: 700,
       lineHeight: ["32px", "36px", "56px"],
       fontFamily: fontFamilies.heading
     },
     trafalgar: {
-      tag: "h1",
+      as: "h1",
       fontSize: [6, 9, 12],
       lineHeight: ["24px", "28px", "40px"],
       fontWeight: 500,
       fontFamily: fontFamilies.heading
     },
     paragon: {
-      tag: "h2",
+      as: "h2",
       fontSize: [6, 8, 11],
       fontWeight: 500,
       fontFamily: fontFamilies.heading,
       lineHeight: ["20px", "26px", "32px"]
     },
     doublePica: {
+      as: "h3",
       fontSize: [6, 6, 10],
       fontWeight: 400,
       fontFamily: fontFamilies.heading,
       lineHeight: ["24px", "24px", "30px"]
     },
     greatPrimer: {
-      tag: "h3",
+      as: "h4",
       fontWeight: 400,
       fontSize: [5, 5, 7],
       fontFamily: fontFamilies.heading,
       lineHeight: ["22px", "22px", "24px"]
     },
     bodyCopy: {
-      tag: "p",
+      as: "p",
       fontSize: [3, 4, 5],
       fontFamily: fontFamilies.body,
       lineHeight: ["20px", "22px", "24px"]
     },
     code: {
-      tag: "span",
+      as: "span",
       px: "4px",
       py: "2px",
       lineHeight: "22px",
