@@ -1,4 +1,6 @@
+import React from "react";
 import styled from "styled-components";
+import tag from "clean-tag";
 import {
   space,
   lineHeight,
@@ -14,7 +16,7 @@ import {
   borderRadius
 } from "styled-system";
 
-export default styled.div`
+const StyledDynamicComponent = styled(tag)`
   ${space}
   ${fontSize}
   ${fontStyle}
@@ -28,3 +30,14 @@ export default styled.div`
   ${fontWeight}
   ${borderRadius}
 `;
+
+const DynamicComponent = ({ tag = "div", children, ...props }) => {
+  const WithComponent = StyledDynamicComponent.withComponent(tag);
+  return <WithComponent {...props}>{children}</WithComponent>;
+};
+
+DynamicComponent.defaultProps = {
+  tag: "div"
+};
+
+export default DynamicComponent;
